@@ -268,10 +268,16 @@
     .mobile-menu nav a span { color: var(--orange); font-family: var(--body); font-size: 9px; letter-spacing: .15em; }
     .mobile-menu-foot { margin-top: auto; display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
 
-    /* Collage banner */
-    .top-banner { background: #0a0a0a; padding-top: 96px; line-height: 0; }
-    .top-banner img { display: block; width: 100%; height: auto; max-width: 1920px; margin: 0 auto; aspect-ratio: 1672 / 941; }
-    @media (max-width: 960px) { .top-banner { padding-top: 80px; } }
+    /* Collage banner — blends under the hero */
+    .top-banner { position: relative; z-index: 1; background: #060606; margin-top: 0; padding-bottom: 36px; line-height: 0; pointer-events: none; }
+    .top-banner img {
+      display: block; width: 100%; height: auto; max-width: 1920px; margin: 0 auto; aspect-ratio: 1672 / 941;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 93%, transparent 100%), linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+      -webkit-mask-composite: source-in; mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 93%, transparent 100%), linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+      mask-composite: intersect; opacity: .92;
+    }
+    .top-banner::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 55%, rgba(10,10,10,.55) 100%); }
+    
 
     /* Hero */
     .hero {
@@ -953,10 +959,6 @@
   </div>
 
   <main>
-    <section class="top-banner" aria-label="NOIR 713 — Houston After Dark">
-      <img src="assets/images/noir713-banner.jpg" srcset="assets/images/noir713-banner-900.jpg 900w, assets/images/noir713-banner.jpg 1672w" sizes="100vw" width="1672" height="941" alt="NOIR 713 Houston After Dark: lounge exterior, main lounge, signature cocktails, premium hookah, VIP booths, full bar, private events, curated music and celebrations" fetchpriority="high">
-    </section>
-
     <section class="hero" id="home" aria-label="NOIR 713, Houston after dark">
       <div class="hero-media">
         <img id="heroImage" src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=2200&q=88" alt="Moody, upscale lounge interior with warm lights" fetchpriority="high">
@@ -997,6 +999,10 @@
           <a href="#experience">Scroll to settle in <i data-lucide="arrow-down"></i></a>
         </div>
       </div>
+    </section>
+
+    <section class="top-banner" aria-label="NOIR 713 — Houston After Dark">
+      <img src="assets/images/noir713-banner.jpg" srcset="assets/images/noir713-banner-900.jpg 900w, assets/images/noir713-banner.jpg 1672w" sizes="100vw" width="1672" height="941" alt="NOIR 713 Houston After Dark: lounge exterior, main lounge, signature cocktails, premium hookah, VIP booths, full bar, private events, curated music and celebrations" loading="lazy">
     </section>
 
     <div class="marquee" aria-label="Premium hookah, Houston hospitality, late night energy">

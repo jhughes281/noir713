@@ -652,6 +652,7 @@
     .footer-col h3 { margin-bottom: 20px; color: #77736d; font-size: 8px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
     .footer-col a { display: table; margin: 11px 0; color: #c3bdb5; font-size: 11px; transition: color .3s; }
     .footer-col a:hover { color: var(--orange); }
+    .footer-note { max-width: 180px; margin: 11px 0; color: var(--muted); font-size: 11px; }
     .newsletter h3 { margin-bottom: 10px; font-family: var(--display); font-size: 27px; font-weight: 500; line-height: 1.05; text-transform: uppercase; }
     .newsletter p { color: var(--muted); font-size: 10px; }
     .newsletter-form { display: flex; margin-top: 22px; border-bottom: 1px solid #5d5953; }
@@ -961,7 +962,7 @@
   <main>
     <section class="hero" id="home" aria-label="NOIR 713, Houston after dark">
       <div class="hero-media">
-        <img id="heroImage" src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=2200&q=88" alt="Moody, upscale lounge interior with warm lights" fetchpriority="high">
+        <img id="heroImage" src="assets/images/noir713-lounge.jpg" width="745" height="480" alt="Concept artwork of the NOIR 713 main lounge with red velvet seating and warm gold lighting" fetchpriority="high">
       </div>
       <canvas id="smokeCanvas" aria-hidden="true"></canvas>
       <div class="hero-spotlight" aria-hidden="true"></div>
@@ -1034,10 +1035,10 @@
 
           <div class="experience-visual reveal" style="--delay:.12s">
             <figure class="experience-photo">
-              <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=1200&q=85" alt="Hookah and soft smoke in a dimly lit lounge" loading="lazy">
+              <img src="assets/images/noir713-hookah.jpg" width="250" height="220" alt="Concept artwork of a gold hookah with soft smoke in a red lounge" loading="lazy">
             </figure>
             <figure class="city-card">
-              <img src="https://images.unsplash.com/photo-1530089711124-09ca91fb4e96?auto=format&fit=crop&w=600&q=82" alt="Houston skyline" loading="lazy">
+              <img src="assets/images/noir713-hero-exterior.jpg" width="920" height="480" alt="Concept artwork of the NOIR 713 exterior at night" loading="lazy">
               <figcaption><span>Home / HTX</span><span>29.7604° N</span></figcaption>
             </figure>
             <div class="visual-note">Come for one.<br>Stay for the night.</div>
@@ -1154,22 +1155,22 @@
         </div>
         <div class="gallery-grid reveal">
           <button class="gallery-item" type="button" data-caption="The main room / Low lights, high energy" aria-label="Open image: The main room">
-            <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=1000&q=84" alt="Atmospheric lounge interior" loading="lazy">
+            <img src="assets/images/noir713-bar.jpg" width="367" height="220" alt="Concept artwork of a backlit bar with gold pendant lighting" loading="lazy">
             <span class="gallery-caption"><small>01 / The space</small><strong>The main room</strong></span>
             <span class="gallery-plus"><i data-lucide="plus"></i></span>
           </button>
           <button class="gallery-item" type="button" data-caption="After hours / Houston on the dance floor" aria-label="Open image: After hours">
-            <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?auto=format&fit=crop&w=1200&q=84" alt="Nightlife and dancing under colorful lights" loading="lazy">
+            <img src="assets/images/noir713-party.jpg" width="418" height="239" alt="Concept artwork of a crowd celebrating with sparklers under red lights" loading="lazy">
             <span class="gallery-caption"><small>02 / The energy</small><strong>After hours</strong></span>
             <span class="gallery-plus"><i data-lucide="plus"></i></span>
           </button>
           <button class="gallery-item" type="button" data-caption="Your corner / Plush booths and personal service" aria-label="Open image: Your corner">
-            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=84" alt="Warm and intimate lounge seating" loading="lazy">
+            <img src="assets/images/noir713-vip.jpg" width="409" height="220" alt="Concept artwork of a red velvet VIP booth with champagne" loading="lazy">
             <span class="gallery-caption"><small>03 / The booth</small><strong>Your corner</strong></span>
             <span class="gallery-plus"><i data-lucide="plus"></i></span>
           </button>
           <button class="gallery-item" type="button" data-caption="Good company / Bring your favorite people" aria-label="Open image: Good company">
-            <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=84" alt="Friends enjoying a stylish night out" loading="lazy">
+            <img src="assets/images/noir713-friends.jpg" width="515" height="239" alt="Concept artwork of friends sharing cocktails" loading="lazy">
             <span class="gallery-caption"><small>04 / The people</small><strong>Good company</strong></span>
             <span class="gallery-plus"><i data-lucide="plus"></i></span>
           </button>
@@ -1275,9 +1276,7 @@
         </div>
         <div class="footer-col">
           <h3>Social</h3>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
-          <a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok ↗</a>
-          <a href="mailto:hello@noir713.com">Email us ↗</a>
+          <p class="footer-note">Official Instagram, TikTok and email will be listed here once confirmed.</p>
         </div>
         <div class="newsletter">
           <h3>The list you actually want to be on.</h3>
@@ -1303,7 +1302,7 @@
   <dialog class="reservation-dialog" id="reservationDialog" aria-labelledby="reservationTitle">
     <div class="reservation-shell">
       <aside class="reservation-aside">
-        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=700&q=80" alt="">
+        <img src="assets/images/noir713-champagne.jpg" alt="">
         <a class="logo" href="#home" tabindex="-1">
           <span class="logo-mark" aria-hidden="true"></span>
           <span class="logo-type"><strong>NOIR <span>713</span></strong><small>HOOKAH SOCIAL · HTX</small></span>
@@ -1674,7 +1673,7 @@
           boardLabel: 'House signatures / 60–90 min',
           note: 'All blends are available with premium tobacco or tobacco-free herbal molasses. Fresh fruit heads and ice hoses available upon request. 21+ only.',
           badge: 'Packed to order',
-          image: 'https://images.unsplash.com/photo-1527661591475-527312dd65f5?auto=format&fit=crop&w=1000&q=84',
+          image: 'assets/images/noir713-hookah.jpg',
           items: [
             { name: '713 After Dark', notes: ['Blackberry', 'Dark mint', 'Ice'], price: '$40', description: 'Our house signature: deep berry, cooling mint, and a clean icy finish. Smooth, balanced, and built for a long night.' },
             { name: 'Space City Peach', notes: ['White peach', 'Jasmine', 'Vanilla'], price: '$38', description: 'Soft white peach meets floral jasmine and a little vanilla. Bright at first, velvety on the finish.' },
@@ -1689,7 +1688,7 @@
           boardLabel: 'Kitchen favorites / Served late',
           note: 'Our kitchen serves until 11 PM Tuesday–Thursday and Sunday, and until 1 AM Friday–Saturday. Please tell us about any allergies.',
           badge: 'From the kitchen',
-          image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=84',
+          image: 'assets/images/noir713-private.jpg',
           items: [
             { name: 'Brisket Sliders', notes: ['Smoked brisket', 'Pickled onion', 'House sauce'], price: '$18', description: 'Texas smoked brisket, tangy pickled onion, and our peppery house sauce on three toasted brioche buns.' },
             { name: 'Hot Honey Chicken', notes: ['Crispy chicken', 'Hot honey', 'Chive'], price: '$16', description: 'Crisp chicken bites glazed in hot honey, finished with chive and a cooling ranch dip.' },
@@ -1704,7 +1703,7 @@
           boardLabel: 'Cocktails & zero-proof / Made fresh',
           note: 'Zero-proof serves are marked in the flavor notes. Please enjoy responsibly. Valid 21+ ID required for all alcoholic beverages.',
           badge: 'Shaken in HTX',
-          image: 'https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=1000&q=84',
+          image: 'assets/images/noir713-cocktail.jpg',
           items: [
             { name: 'Bayou Old Fashioned', notes: ['Bourbon', 'Pecan', 'Smoked orange'], price: '$17', description: 'Bourbon, toasted pecan, and aromatic bitters with a fragrant smoked orange finish.' },
             { name: 'Space City Mule', notes: ['Vodka', 'Ginger', 'Lime'], price: '$16', description: 'A sharp, ice-cold mule with spicy ginger, fresh lime, and a subtle Texas grapefruit twist.' },
